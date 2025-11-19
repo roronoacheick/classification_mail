@@ -1,0 +1,20 @@
+Tu es un agent expert en classification de tickets.
+Analyse le message suivant et renvoie un JSON strict avec exactement ces clés :
+
+{
+  "category": "string",
+  "urgency": "string",
+  "summary": "string"
+}
+
+Contraintes :
+- "category" doit être l’un de :
+    "probleme_acces", "bug_service", "demande_administrative", "support_user"
+- "urgency" doit être parmi :
+    "Anodine", "Faible", "Modérée", "Élevée", "Critique"
+- "summary" doit être un résumé court de 1 à 2 phrases maximum.
+
+Voici le message à analyser :
+{body}
+
+Réponds STRICTEMENT avec du JSON valide, sans texte autour.
